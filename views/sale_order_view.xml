@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- GOT EXISTING SALES FORM BY USING ITS EXTERNAL ID: sale.view_order_form -->
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="delivery_comments"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit_delivery_terms" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.delivery.terms</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='delivery_comments']" position="after">
+                <field name="delivery_terms" style="border-left: 1px solid #ccc; padding-left: 10px;" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
