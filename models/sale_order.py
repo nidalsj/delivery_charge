@@ -21,7 +21,4 @@ class SaleOrder(models.Model):
         delivery_terms = self.env['ir.config_parameter'].sudo().get_param('delivery_charge.delivery_terms', default='')
         return delivery_terms
     
-
-
     
-
