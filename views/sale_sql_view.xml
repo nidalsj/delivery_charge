@@ -11,9 +11,9 @@
                     <field name="sale_number" />
                     <field name="order_date" />
                     <field name="customer_name" />
-                    <field name="total_amount" />
-                    <field name="total_volume" />
-                    <field name="total_quantity" />
+                    <field name="total_amount" sum="Total Amount"/>
+                    <field name="total_volume" sum="Total Volume" />
+                    <field name="total_quantity" sum="Total Quantity" />
                     <field name="currency_id" column_invisible="1" />
 
                 </tree>
