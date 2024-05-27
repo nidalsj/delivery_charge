@@ -21,4 +21,19 @@ class SaleOrder(models.Model):
         delivery_terms = self.env['ir.config_parameter'].sudo().get_param('delivery_charge.delivery_terms', default='')
         return delivery_terms
     
+
+    # FUNCTION OPEN WIZARD
+    def action_open_wizard(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Import Sale Order Document',
+            'view_mode': 'form',
+            'res_model': 'sale.order.wizard',
+            'target': 'new',
+            'context': {
+                'default_sale_order_id': self.id,
+            },
+        }
     
+
+     

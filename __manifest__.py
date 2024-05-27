@@ -13,6 +13,7 @@
         'views/sale_sql_view.xml',
         'views/sale_order_line_view.xml',
         'report/sale_order_pdf_report.xml',
+        'wizard/sale_order_wizard.xml',
     ],
 
 
