@@ -34,6 +34,4 @@ class SaleOrder(models.Model):
                 'default_sale_order_id': self.id,
             },
         }
-    
-
-     
+         
